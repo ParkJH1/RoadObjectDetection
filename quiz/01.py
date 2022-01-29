@@ -1,12 +1,13 @@
 import json
 
-f = open('../data/labels/labels.json')
-j = json.load(f)
-
 file_name = input()
 
-for l in j:
-    if l['name'] == file_name:
-        for label in l['labels']:
-            if 'box2d' in label:
-                print(label['category'], label['box2d'])
+f = open('../data/labels/labels.json')
+labels = json.load(f)
+
+for label in labels:
+    if label['name'] == file_name:
+        for l in label['labels']:
+            if 'box2d' in l:
+                print(l['category'], l['box2d'])
+                print(l['box2d']['x1'], l['box2d']['y1'], l['box2d']['x2'], l['box2d']['y2'])
