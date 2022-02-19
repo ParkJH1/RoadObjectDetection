@@ -2,3 +2,4 @@ data
 .idea
 classification_data
 models
+logs
