@@ -9,14 +9,14 @@ train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
 
 model = tf.keras.models.load_model('../models/mymodel.h5')
 
-learning_rate = 0.001
+learning_rate = 0.00000000000000000001
 model.compile(
     loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
     optimizer=tf.keras.optimizers.RMSprop(learning_rate=learning_rate),
     metrics=['accuracy']
 )
 
-model.fit(train_dataset, epochs=5)
+model.fit(train_dataset, epochs=50)
 
 if not os.path.exists('../models'):
     os.mkdir('../models')
