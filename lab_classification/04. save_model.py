@@ -16,8 +16,6 @@ model = tf.keras.Sequential([
     tf.keras.layers.Softmax()
 ])
 
-model.summary()
-
 if not os.path.exists('../models'):
     os.mkdir('../models')
 
