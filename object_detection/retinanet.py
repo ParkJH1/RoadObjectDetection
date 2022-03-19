@@ -2,7 +2,6 @@ import numpy as np
 import tensorflow as tf
 import os
 import cv2
-import tensorflow_datasets as tfds
 
 
 def swap_xy(boxes):
