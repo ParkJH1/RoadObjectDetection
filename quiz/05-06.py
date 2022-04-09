@@ -28,12 +28,12 @@ model = tf.keras.Sequential([
 
 learning_rate = 0.001
 model.compile(
-    loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
+    loss=tf.keras.losses.CategoricalCrossentropy(),
     optimizer=tf.keras.optimizers.RMSprop(learning_rate=learning_rate),
     metrics=['accuracy']
 )
 
-history = model.fit(train_dataset, epochs=30)
+model.fit(train_dataset, epochs=30)
 
 if not os.path.exists('../models'):
     os.mkdir('../models')
