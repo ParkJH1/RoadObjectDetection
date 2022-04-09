@@ -7,7 +7,7 @@ import tensorflow as tf
 
 class YOLO_V3:
     def __init__(self):
-        f = open('../models/coco_classes.txt')
+        f = open('../models/yolov3/classes.txt')
         self.class_names = [str(i).strip() for i in f.readlines()]
         f.close()
 
@@ -149,7 +149,7 @@ class YOLO_V3:
         range1 = 75
         range2 = [58, 66, 74]
 
-        with open('../models/yolov3.weights', 'rb') as wf:
+        with open('../models/yolov3/yolov3.weights', 'rb') as wf:
             major, minor, revision, seen, _ = np.fromfile(wf, dtype=np.int32, count=5)
 
             j = 0
