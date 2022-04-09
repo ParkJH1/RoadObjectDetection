@@ -93,7 +93,7 @@ class ClassificationAI(QWidget):
         if path != '':
             self.load_model_button.setEnabled(False)
             self.train_model_button.setEnabled(False)
-            self.model.load(self.model_path)
+            self.model.load(path)
             self.load_model_button.setText('모델 불러오기 완료')
             self.predict_button.setEnabled(True)
 
