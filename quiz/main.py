@@ -44,5 +44,5 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_path = 'D:/Downloads/bdd100k_videos_test_00/bdd100k/videos/test/cabc9045-581f64de.mov'
+    video_path = '../data/videos/cabc9045-581f64de.mov'
     video_processing(video_path, False)
