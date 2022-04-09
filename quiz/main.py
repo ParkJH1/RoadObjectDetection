@@ -17,7 +17,7 @@ def video_processing(video_path, background):
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-    out = cv2.VideoWriter('outputs/output.wmv', fourcc, cap.get(cv2.CAP_PROP_FPS), (width, height))
+    out = cv2.VideoWriter('../outputs/output.wmv', fourcc, cap.get(cv2.CAP_PROP_FPS), (width, height))
 
     now_frame = 1
 
