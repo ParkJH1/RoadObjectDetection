@@ -176,7 +176,7 @@ class RoadObjectDetectionVideo(QWidget):
 
     def video_process_finished(self):
         self.load_video_button.setText('영상 처리 완료')
-        self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(QFileInfo('outputs/output.wmv').absoluteFilePath())))
+        self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(QFileInfo('../outputs/output.wmv').absoluteFilePath())))
         self.play_button.setEnabled(True)
 
     def play_video(self):
